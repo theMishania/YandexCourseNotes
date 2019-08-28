@@ -1,0 +1,12 @@
+//
+//  Release.xcconfig
+//  Notes
+//
+//  Created by Мишаня on 27/06/2019.
+//  Copyright © 2019 Мишаня. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+APP_NAME = "Notes"

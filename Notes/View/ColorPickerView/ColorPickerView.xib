@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ColorPickerView" customModule="Notes" customModuleProvider="target">
+            <connections>
+                <outlet property="chooseButton" destination="nKN-Uc-uxB" id="s4U-vt-6Gl"/>
+                <outlet property="colorPalatteView" destination="w5l-WX-gkD" id="NLP-UY-hH4"/>
+                <outlet property="colorView" destination="QG7-1M-9vx" id="bqY-r7-v2H"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QG7-1M-9vx">
+                    <rect key="frame" x="83" y="574.5" width="248" height="49.5"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="QG7-1M-9vx" secondAttribute="height" multiplier="25:5" id="5ca-nd-vPa"/>
+                        <constraint firstAttribute="width" secondItem="QG7-1M-9vx" secondAttribute="height" multiplier="248:49" id="rpt-ww-UXj"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="5ca-nd-vPa"/>
+                            <exclude reference="rpt-ww-UXj"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=compact">
+                        <mask key="constraints">
+                            <include reference="rpt-ww-UXj"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular">
+                        <mask key="constraints">
+                            <include reference="5ca-nd-vPa"/>
+                        </mask>
+                    </variation>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w5l-WX-gkD" customClass="ColorPalatteView" customModule="Notes" customModuleProvider="target">
+                    <rect key="frame" x="20.5" y="186.5" width="373" height="373"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="w5l-WX-gkD" secondAttribute="height" multiplier="1:1" id="x4d-TJ-Nbf"/>
+                        <constraint firstAttribute="width" secondItem="w5l-WX-gkD" secondAttribute="height" multiplier="1:1" id="xM2-z1-kQF"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="x4d-TJ-Nbf"/>
+                            <exclude reference="xM2-z1-kQF"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=compact">
+                        <mask key="constraints">
+                            <include reference="x4d-TJ-Nbf"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular">
+                        <mask key="constraints">
+                            <include reference="xM2-z1-kQF"/>
+                        </mask>
+                    </variation>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nKN-Uc-uxB">
+                    <rect key="frame" x="160" y="644" width="94" height="30"/>
+                    <state key="normal" title="Choose Color"/>
+                    <connections>
+                        <action selector="chooseButtomTapped:" destination="-1" eventType="touchUpInside" id="WDo-aq-8FG"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="w5l-WX-gkD" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="063-Qa-bw2"/>
+                <constraint firstItem="w5l-WX-gkD" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="8/10" id="8gf-We-dVr"/>
+                <constraint firstItem="nKN-Uc-uxB" firstAttribute="top" secondItem="QG7-1M-9vx" secondAttribute="bottom" constant="20" id="FeZ-6W-eIa"/>
+                <constraint firstItem="QG7-1M-9vx" firstAttribute="top" secondItem="w5l-WX-gkD" secondAttribute="bottom" constant="15" id="ICp-KS-asb"/>
+                <constraint firstItem="w5l-WX-gkD" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" constant="-100" id="J57-Nj-hWP"/>
+                <constraint firstItem="nKN-Uc-uxB" firstAttribute="top" secondItem="QG7-1M-9vx" secondAttribute="bottom" constant="20" id="Njj-oQ-AYL"/>
+                <constraint firstItem="w5l-WX-gkD" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="9/10" id="PoK-oi-NTm"/>
+                <constraint firstItem="QG7-1M-9vx" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="120" id="ago-6S-CLq"/>
+                <constraint firstItem="w5l-WX-gkD" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-75" id="at2-m9-pGp"/>
+                <constraint firstItem="nKN-Uc-uxB" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="cJQ-yX-bJf"/>
+                <constraint firstItem="QG7-1M-9vx" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="1/10" id="dLN-Dm-EPD"/>
+                <constraint firstItem="QG7-1M-9vx" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="3/5" id="oDX-HW-Bjh"/>
+                <constraint firstItem="nKN-Uc-uxB" firstAttribute="centerX" secondItem="QG7-1M-9vx" secondAttribute="centerX" id="txb-Vo-vs8"/>
+                <constraint firstItem="w5l-WX-gkD" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="u4Y-fc-A2Y"/>
+                <constraint firstItem="QG7-1M-9vx" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="v7g-OB-V3M"/>
+                <constraint firstItem="QG7-1M-9vx" firstAttribute="leading" secondItem="w5l-WX-gkD" secondAttribute="trailing" constant="36.333333333333371" id="yjs-dn-16M"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="063-Qa-bw2"/>
+                    <exclude reference="8gf-We-dVr"/>
+                    <exclude reference="J57-Nj-hWP"/>
+                    <exclude reference="PoK-oi-NTm"/>
+                    <exclude reference="at2-m9-pGp"/>
+                    <exclude reference="u4Y-fc-A2Y"/>
+                    <exclude reference="ICp-KS-asb"/>
+                    <exclude reference="ago-6S-CLq"/>
+                    <exclude reference="dLN-Dm-EPD"/>
+                    <exclude reference="oDX-HW-Bjh"/>
+                    <exclude reference="v7g-OB-V3M"/>
+                    <exclude reference="yjs-dn-16M"/>
+                    <exclude reference="FeZ-6W-eIa"/>
+                    <exclude reference="Njj-oQ-AYL"/>
+                    <exclude reference="cJQ-yX-bJf"/>
+                    <exclude reference="txb-Vo-vs8"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=compact">
+                <mask key="constraints">
+                    <include reference="8gf-We-dVr"/>
+                    <include reference="J57-Nj-hWP"/>
+                    <include reference="u4Y-fc-A2Y"/>
+                    <include reference="ago-6S-CLq"/>
+                    <include reference="dLN-Dm-EPD"/>
+                    <include reference="yjs-dn-16M"/>
+                    <include reference="FeZ-6W-eIa"/>
+                    <include reference="txb-Vo-vs8"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular">
+                <mask key="constraints">
+                    <include reference="063-Qa-bw2"/>
+                    <include reference="PoK-oi-NTm"/>
+                    <include reference="at2-m9-pGp"/>
+                    <include reference="ICp-KS-asb"/>
+                    <include reference="oDX-HW-Bjh"/>
+                    <include reference="v7g-OB-V3M"/>
+                    <include reference="Njj-oQ-AYL"/>
+                    <include reference="cJQ-yX-bJf"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="220.28985507246378" y="152.00892857142856"/>
+        </view>
+    </objects>
+</document>
